@@ -7,10 +7,10 @@
         <dependent-module archiveName="database-api-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/database-api/database-api">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="database-orm-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/database-orm/database-orm">
+        <dependent-module archiveName="database-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/database/database">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="database-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/database/database">
+        <dependent-module archiveName="database-orm-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/database-orm/database-orm">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="web"/>
