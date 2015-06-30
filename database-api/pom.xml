@@ -16,9 +16,11 @@
 
 
 
+  
+  
   <dependency>
   	<groupId>com.samuk</groupId>
-  	<artifactId>database-orm</artifactId>
+  	<artifactId>database</artifactId>
   	<version>1.0-SNAPSHOT</version>
   </dependency>
   </dependencies>
