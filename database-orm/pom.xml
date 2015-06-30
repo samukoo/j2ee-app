@@ -4,7 +4,6 @@
 
 	<artifactId>database-orm</artifactId>
 	<packaging>jar</packaging>
-
 	<name>database-orm</name>
 	<url>http://maven.apache.org</url>
 
@@ -13,10 +12,6 @@
 	</properties>
 
 	<dependencies>
-
-
-
-
 
 	</dependencies>
 	<parent>
