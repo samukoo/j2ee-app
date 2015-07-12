@@ -42,4 +42,11 @@
 		</dependency>
 
 	</dependencies>
+	<modules>
+		<module>../database</module>
+		<module>../database-api</module>
+		<module>../database-orm</module>
+		<module>../rest</module>
+		<module>../web</module>
+	</modules>
 </project>
