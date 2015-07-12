@@ -12,6 +12,29 @@
     <script src="http://code.highcharts.com/modules/exporting.js" type="text/javascript"></script>
     <script src="js/charttest.js" type="text/javascript"></script>
 
+
+
+<script type="text/javascript" language="javascript">
+         $(document).ready(function() {
+            $("#driver").click(function(event){
+               $.getJSON('http://localhost:8080/rest/webapi/sprint/listall', function(jd) {
+                  $('#stage').html('<p> Name: ' + jd.name + '</p>');
+                  $('#stage').append('<p>Age : ' + jd.age+ '</p>');
+                  $('#stage').append('<p> Sex: ' + jd.sex+ '</p>');
+               });
+            });
+         });
+      </script>
+
+
+
+
+
+
+
+
+
+
 </head>
 
 <body>
@@ -72,8 +95,17 @@
 		HighCharts ends
 	 -->
 
+	 <!--
+		jsonDemo
+	-->
 
-
+	<p>Click on the button to load result.html file:</p>
+		
+    <div id="stage" style="background-color:#cc0;">
+       STAGE
+    </div>
+		
+    <input type="button" id="driver" value="Load Data" />
 
 
 
