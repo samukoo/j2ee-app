@@ -19,6 +19,10 @@ public class Sprint {
 	@EJB
 	private CommitmentService cs;
 
+	/**
+	 * EJB context lookup. JBoss container for some reason can't handle JAX-RS / EJB 
+	 * setup. <br> Glassfish might work without InitialContext lookup phase 
+	 */
 	public Sprint() {
 		try {
 	        String lookupName = "java:global/application/rest/CommitmentServiceImpl!com.samuk.service.CommitmentService";
@@ -28,13 +32,21 @@ public class Sprint {
 	    }
 	}
 	
-	
+	/**
+	 * Test Method
+	 * @return String
+	 */
+	@Deprecated
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public String restTest(){
 		return "works";
 	}
 	
+	/**
+	 * List all commitments
+	 * @return List {@link DbCommitment}
+	 */
 	@GET
 	@Path("listall")
 	@Produces(MediaType.APPLICATION_JSON)
