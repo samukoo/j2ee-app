@@ -18,8 +18,9 @@ public interface SprintService {
 	 * @param sprint
 	 * @return
 	 */
-	public DbSprint addSprint(DbSprint sprint);
-	public DbSprint findSprintById(Long sprintId);
+	public void addSprint(DbSprint sprint);
+	public void addSprint(String week, String description, String teamId);
+	public DbSprint findSprintById(String sprintId);
 	public List<DbSprint> getAllSprints();
 	public void deleteSprint(DbSprint sprint);
 	public void printSprint(DbSprint sprint);

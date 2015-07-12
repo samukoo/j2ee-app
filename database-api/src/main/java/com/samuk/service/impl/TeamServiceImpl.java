@@ -21,26 +21,35 @@ public class TeamServiceImpl implements TeamService {
 	@Inject
 	private TeamOperations teamOps;
 	
+	@Inject 
+	private DbTeam team;
 	
-	public TeamServiceImpl() {
-    }
+	public TeamServiceImpl() {}
 
 	@Override
-	public DbTeam addTeam(DbTeam team) {
+	public void addTeam(DbTeam team) {
 		teamOps.persistTeam(team);
-		return team;
 	}
 
 	@Override
+	public void addTeam(String name, String description) {
+		team.setName(name)
+			.setDescription(description);
+		teamOps.persistTeam(team);
+	}
+	
+	
+	@Override
 	public DbTeam findTeamById(String teamId) {
-		// TODO Auto-generated method stub
-		return null;
+		Long id = Long.parseLong(teamId);
+		return teamOps.getTeam(id);
+		
+		
 	}
 
 	@Override
 	public List<DbTeam> getAllTeams() {
-		// TODO Auto-generated method stub
-		return null;
+		return teamOps.getAllTeams();
 	}
 
 	@Override
@@ -59,5 +68,7 @@ public class TeamServiceImpl implements TeamService {
 	public void printTeam(DbTeam team) {
 		teamOps.printTeam(team);
 	}
+
+	
 
 }
