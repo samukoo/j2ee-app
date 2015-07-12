@@ -11,6 +11,7 @@ public class DbTeam {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String name;
+	private String description;
 	
 	public DbTeam() {
 		super();
@@ -18,20 +19,32 @@ public class DbTeam {
 	public Long getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public DbTeam setId(Long id) {
 		this.id = id;
+		return this;
 	}
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
+	public DbTeam setName(String name) {
 		this.name = name;
+		return this;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public DbTeam setDescription(String description) {
+		this.description = description;
+		return this;
 	}
 	
 	@Override
 	public String toString() {
-		return "DbTeam [id=" + id + ", name=" + name + "]";
+		return "DbTeam [id=" + id + ", name=" + name + ", description="
+				+ description + "]";
 	}
+	
+	
 
 	
 	
