@@ -26,11 +26,18 @@ public class TeamServiceImpl implements TeamService {
 	
 	public TeamServiceImpl() {}
 
+	/**
+	 * Persist {@link DbTeam} object
+	 */
 	@Override
 	public void addTeam(DbTeam team) {
 		teamOps.persistTeam(team);
 	}
 
+	
+	/**
+	 * Persist {@link DbTeam} which is constructed from name and description Strings
+	 */
 	@Override
 	public void addTeam(String name, String description) {
 		team.setName(name)
@@ -38,7 +45,10 @@ public class TeamServiceImpl implements TeamService {
 		teamOps.persistTeam(team);
 	}
 	
-	
+	/**
+	 * Find team by Id 
+	 * @return {@link DbTeam}
+	 */
 	@Override
 	public DbTeam findTeamById(String teamId) {
 		Long id = Long.parseLong(teamId);
@@ -47,6 +57,10 @@ public class TeamServiceImpl implements TeamService {
 		
 	}
 
+	/**
+	 * Returns all Team objects
+	 * @return List {@link DbTeam}
+	 */
 	@Override
 	public List<DbTeam> getAllTeams() {
 		return teamOps.getAllTeams();
@@ -64,6 +78,9 @@ public class TeamServiceImpl implements TeamService {
 		return null;
 	}
 
+	/**
+	 * Calls objects print method 
+	 */
 	@Override
 	public void printTeam(DbTeam team) {
 		teamOps.printTeam(team);

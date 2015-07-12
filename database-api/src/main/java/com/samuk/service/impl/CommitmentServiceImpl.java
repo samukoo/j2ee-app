@@ -1,5 +1,7 @@
 package com.samuk.service.impl;
 
+import java.util.List;
+
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -34,15 +36,21 @@ public class CommitmentServiceImpl implements CommitmentService {
      */
     public CommitmentServiceImpl() {}
 
+    /**
+     * Persist commitment object
+     */
 	@Override
 	public void saveCommitment(DbCommitment commitment) {
 	}
 
+	/**
+	 * Persist commitment. If Commit points are empty, Exceptions is thrown.
+	 */
+	// TODO refactor: saveCom.. to persistCom..
 	@Override
 	public void saveCommitment(Long memberId, String committedPoints, String sprintId) {
 
 		try{
-		
 			if(!committedPoints.isEmpty()){
 			commitment.setSprint(sprintService.findSprintById(sprintId))
 					  .setCommittedPoints(Integer.parseInt(committedPoints))
@@ -56,7 +64,14 @@ public class CommitmentServiceImpl implements CommitmentService {
 		}catch(EmptyPointsException e){
 			e.printError();
 		}
-		
+	}
+
+	/**
+	 * List all commitments from DB
+	 */
+	@Override
+	public List<DbCommitment> listAll() {
+		return commitmentsOperations.getAll();
 	}
 
 }
