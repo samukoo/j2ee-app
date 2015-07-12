@@ -43,11 +43,4 @@ public class DbTeam {
 		return "DbTeam [id=" + id + ", name=" + name + ", description="
 				+ description + "]";
 	}
-	
-	
-
-	
-	
-	
-	
 }

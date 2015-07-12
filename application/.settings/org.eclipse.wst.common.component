@@ -11,15 +11,15 @@
         <dependent-module archiveName="database-api-1.0-SNAPSHOT.jar" deploy-path="/lib" handle="module:/resource/database-api/database-api">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="rest-api.war" deploy-path="/" handle="module:/resource/rest-api/rest-api">
-            <dependent-object/>
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <dependent-module archiveName="web.war" deploy-path="/" handle="module:/resource/web/web">
             <dependent-object/>
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="database-parent.jar" deploy-path="/lib" handle="module:/resource/database-parent/database-parent">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="rest.war" deploy-path="/" handle="module:/resource/rest/rest">
+            <dependent-object/>
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>
