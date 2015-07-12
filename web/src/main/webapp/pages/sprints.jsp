@@ -59,7 +59,7 @@
 			<tbody>
 					<c:forEach items="${sprints }" var="sprint">
 						<tr>
-							<td><a href="sprint?id=${sprint.eid }">${sprint.week }</a></td>
+							<td><a href="sprint?id=${sprint.id }">${sprint.week }</a></td>
 							<td>${sprint.description }</td>
 							<td>${sprint.team.description }</td>
 						</tr>
@@ -74,8 +74,8 @@
 		<p>Sprint week: <input type="text" name="week" value=""></p>
 		<p>Sprint description: <input type="text" name="description" value=""></p>
 		<p>Sprint team:<br>
-		<c:forEach items="${teams }" var="team">
-			 <input type="radio" name="team" value="${team.eid }">${team.name }<br>
+		<c:forEach items="${teams}" var="team">
+			 <input type="radio" name="team" value="${team.id }">${team.name }<br>
 		</c:forEach>
 		<button type="submit" class="btn btn-info">Add new team</button>
 	</form>

@@ -7,8 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bootstrap 101 Template</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="http://code.highcharts.com/highcharts.js" type="text/javascript"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js" type="text/javascript"></script>
+    <script src="js/charttest.js" type="text/javascript"></script>
 
 </head>
+
 <body>
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -54,6 +59,24 @@
 
 	
 	<p>list all sprints</p>
+
+	<!-- 
+		HighCharts starts
+	 -->
+
+	<div id="container" style="width:100%; height:400px;">
+	</div>	
+
+
+	<!-- 
+		HighCharts ends
+	 -->
+
+
+
+
+
+
 
 
 	<script

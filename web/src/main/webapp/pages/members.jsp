@@ -59,9 +59,9 @@
 			<tbody>
 				<c:forEach items="${members}" var="member">
 					<tr>
-						<td><a href="user?id=${member.mid}">${member.name}</a> </td>
+						<td><a href="user?id=${member.id}">${member.name}</a> </td>
 						<td>${member.role}</td>
-						<td><a href="team?id=${member.team.eid}">${member.team.description}</a></td>
+						<td><a href="team?id=${member.team.id}">${member.team.description}</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -81,7 +81,7 @@
 		</select><br>
 		Team:<br> 
 		<c:forEach items="${teams}" var="team">
-			<input type="radio" name="team" value="${team.eid}">${team.name}<br> 
+			<input type="radio" name="team" value="${team.id}">${team.name}<br> 
 		</c:forEach>
 
 		

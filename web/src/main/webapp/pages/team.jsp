@@ -47,7 +47,7 @@
 	<br>
 	<br>
 	<br>
-	<p>Team site for id: ${team.eid} with description: ${team.description }</p>
+	<p>Team site for id: ${team.id} with description: ${team.description }</p>
 
 	<form action="/web/main">
 	<button type="submit" class="btn btn-info">Main</button></form>
@@ -64,7 +64,7 @@
 			<tbody>
 					<c:forEach items="${members}" var="member">
 					<tr>
-						<td><a href="user?id=${member.mid }">${member.name}</a></td>
+						<td><a href="user?id=${member.id }">${member.name}</a></td>
 						<td>${member.role}</td>
 					</tr>
 					</c:forEach>

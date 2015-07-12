@@ -58,7 +58,7 @@
 			<tbody>
 					<c:forEach items="${teams }" var="team">
 						<tr>
-							<td><a href="team?id=${team.eid }">${team.name }</a></td>
+							<td><a href="team?id=${team.id }">${team.name }</a></td>
 							<td>${team.description }</td>
 						</tr>
 					</c:forEach>
@@ -74,14 +74,6 @@
 	
 		<button type="submit" class="btn btn-info">Add new team</button>
 	</form>
-
-
-
-
-
-
-	
-
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

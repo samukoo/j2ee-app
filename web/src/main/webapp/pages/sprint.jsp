@@ -66,7 +66,7 @@
 				<form action="save" method="post">
 					<c:forEach items="${members}" var="member">
 					<tr>
-						<td><a href="user?id=${member.mid }">${member.name}</a></td>
+						<td><a href="user?id=${member.id }">${member.name}</a></td>
 						<td>${member.role}</td>
 						
 						<td>
@@ -77,8 +77,8 @@
 						</td>
 					</tr>
 					</c:forEach>
-					<input type="hidden" name="sprint" value="${Sprint.eid }">
-					<button type="submit" class="btn btn-info">Add new team</button>
+					<input type="hidden" name="sprint" value="${sprint.id }">
+					<button type="submit" class="btn btn-info">Commit</button>
 				</form>
 			</tbody>
 		
