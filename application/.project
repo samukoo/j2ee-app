@@ -8,6 +8,7 @@
 		<project>database</project>
 		<project>database-api</project>
 		<project>web</project>
+		<project>rest-api</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
