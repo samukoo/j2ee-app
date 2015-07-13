@@ -10,7 +10,7 @@ import com.samuk.orm.DbTeamMember;
 public interface MemberService {
 
 	public void addMember(DbTeamMember member);
-	public void addMember(String firstname, String lastname, String teamId, String role);
+	public String addMember(String firstname, String lastname, String teamId, String role);
 	public DbTeamMember getMemberById(Long memberId);
 	public List<DbTeamMember> listAllMembers();
 	public List<DbTeamMember> listAllTeamMembers(String teamId);

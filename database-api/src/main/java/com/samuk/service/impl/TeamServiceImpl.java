@@ -18,11 +18,8 @@ import com.samuk.service.TeamService;
 @Stateless
 public class TeamServiceImpl implements TeamService {
 
-	@Inject
-	private TeamOperations teamOps;
-	
-	@Inject 
-	private DbTeam team;
+	@Inject private TeamOperations teamOps;
+	@Inject private DbTeam team;
 	
 	public TeamServiceImpl() {}
 
@@ -33,7 +30,6 @@ public class TeamServiceImpl implements TeamService {
 	public void addTeam(DbTeam team) {
 		teamOps.persistTeam(team);
 	}
-
 	
 	/**
 	 * Persist {@link DbTeam} which is constructed from name and description Strings
