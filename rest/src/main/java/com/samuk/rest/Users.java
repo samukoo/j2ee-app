@@ -1,5 +1,7 @@
 package com.samuk.rest;
 
+import java.util.List;
+
 import javax.ejb.EJB;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -9,15 +11,16 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import com.samuk.orm.DbTeamMember;
 import com.samuk.service.MemberService;
 
 @Path("users")
-public class MemberRestInterface {
+public class Users {
 
 	@EJB
 	private MemberService memberservice;
 	
-	public MemberRestInterface() {
+	public Users() {
 	
 		String name = "java:global/application/rest/MemberServiceImpl!com.samuk.service.MemberService";
 		try {
@@ -25,7 +28,6 @@ public class MemberRestInterface {
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}
-
 	}
 	
 	/**
@@ -45,6 +47,20 @@ public class MemberRestInterface {
 	
 		return memberservice.addMember(firstname, lastname, teamId, role);
 
+	}
+	
+	/**
+	 * Lists all users
+	 * @return JSON object <br>
+	 * example: <br>
+	 * <code> [{"id":1,"name":"John Doe"}] </code>
+	 * 
+	 */
+	@GET
+	@Path("listusers")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<DbTeamMember> listUsers(){
+		return memberservice.listAllMembers();
 	}
 	
 	@GET
